@@ -7,3 +7,6 @@
 
 build/
 example/build/
+
+# FVM Version Cache
+.fvm/

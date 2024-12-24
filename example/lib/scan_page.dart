@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:scan/scan.dart';
 
 class ScanPage extends StatelessWidget {
-  ScanController controller = ScanController();
+  final ScanController controller = ScanController();
+  ScanPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,7 @@ class ScanPage extends StatelessWidget {
                   builder: (BuildContext context) {
                     return Scaffold(
                       appBar: AppBar(
-                        title: Text('scan result'),
+                        title: const Text('scan result'),
                       ),
                       body: Center(
                         child: Text(data),
@@ -37,19 +38,19 @@ class ScanPage extends StatelessWidget {
               child: Row(
                 children: [
                   ElevatedButton(
-                    child: Text("toggleTorchMode"),
+                    child: const Text("toggleTorchMode"),
                     onPressed: () {
                       controller.toggleTorchMode();
                     },
                   ),
                   ElevatedButton(
-                    child: Text("pause"),
+                    child: const Text("pause"),
                     onPressed: () {
                       controller.pause();
                     },
                   ),
                   ElevatedButton(
-                    child: Text("resume"),
+                    child: const Text("resume"),
                     onPressed: () {
                       controller.resume();
                     },
